@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.scene.com/javafx/17" xmlns:fx="http://javafx.scene.com/fxml/1" fx:controller="com.emailclient.controller.LoginController">
+    <Label text="E-mail Client Login" style="-fx-font-size: 18px;"/>
+    <TextField fx:id="usernameField" promptText="Username" maxWidth="200"/>
+    <PasswordField fx:id="passwordField" promptText="Password" maxWidth="200"/>
+    <Button text="Login" onAction="#handleLogin"/>
+</VBox>
