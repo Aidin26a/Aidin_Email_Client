@@ -1,24 +1,33 @@
 package com.emailclient;
 
+import com.emailclient.controller.DashboardController;
+import com.emailclient.database.DatabaseManager; // Step 1: Add this import
+import com.emailclient.service.DatabaseService;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 
 public class MainApp extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
-        // This looks in src/main/resources/com/emailclient/view/
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/emailclient/view/login.fxml"));
+    public void start(Stage stage) throws Exception {
+        DatabaseService db = new DatabaseService();
+        String[] credentials = db.getSavedUser();
 
-        if (fxmlLoader.getLocation() == null) {
-            throw new IllegalStateException("FXML file not found! Double-check the folder path in src/main/resources.");
+        if (credentials != null) {
+            // Auto-login: Go straight to Dashboard
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/emailclient/dashboard.fxml"));
+            Parent root = loader.load();
+            DashboardController controller = loader.getController();
+            controller.setCredentials(credentials[0], credentials[1]);
+            stage.setScene(new Scene(root));
+        } else {
+            // No saved user: Show Login
+            Parent root = FXMLLoader.load(getClass().getResource("/com/emailclient/login.fxml"));
+            stage.setScene(new Scene(root));
         }
-
-        Scene scene = new Scene(fxmlLoader.load(), 400, 300);
-        stage.setTitle("Aidin E-mail Client - Login");
-        stage.setScene(scene);
         stage.show();
     }
 

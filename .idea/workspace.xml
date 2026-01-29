@@ -5,11 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0a3d172-3989-4e41-b8e9-513e859a1851" name="Changes" comment="Sprint 1: Core MVC structure, JavaFX login UI, and modular configuration">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/controller/ComposeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/controller/DashboardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/database/DatabaseManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/database/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/service/DatabaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/utils/SceneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/emailclient/compose.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/emailclient/dashboard.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/emailclient/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailclient/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailclient/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailclient/model/EmailMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/model/EmailMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailclient/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/emailclient/view/login.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +32,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
-        <option value="FxmlFile" />
         <option value="module-info" />
+        <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -47,6 +60,8 @@
     "JUnit.AuthServiceTest (1).executor": "Run",
     "JUnit.AuthServiceTest.executor": "Run",
     "Maven.aidin-email-client [clean].executor": "Run",
+    "Maven.aidin-email-client [compile].executor": "Run",
+    "Maven.aidin-email-client [install].executor": "Run",
     "Maven.aidin-email-client [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor": "Run",
     "Maven.aidin-email-client [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -61,44 +76,31 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alims\Documents\Aidin_Email_Client\src\main\resources\com\emailclient" />
       <recent name="C:\Users\Alims\Documents\Aidin_Email_Client\src\main\resources\com\emailclient\view" />
+      <recent name="C:\Users\Alims\Documents\Aidin_Email_Client\src\main" />
+      <recent name="C:\Users\Alims\Documents\Aidin_Email_Client\src\main\java\com\emailclient" />
       <recent name="C:\Users\Alims\OneDrive\Рабочий стол\Aidin_Email_Client\target\module-info" />
-      <recent name="C:\Users\Alims\OneDrive\Рабочий стол\Aidin_Email_Client\src\main\java" />
-      <recent name="C:\Users\Alims\OneDrive\Рабочий стол\Aidin_Email_Client\src\main\java\com\emailclient" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.emailclient.service" />
       <recent name="com.emailclient" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.emailclient.view" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AuthServiceTest (1)">
+  <component name="RunManager" selected="Application.MainApp">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.emailclient.MainApp" />
       <module name="aidin-email-client" />
-      <option name="VM_PARAMETERS" value="--add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--add-modules javafx.controls,javafx.fxml,javafx.web" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.emailclient.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthServiceTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="aidin-email-client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.emailclient.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.emailclient.service" />
-      <option name="MAIN_CLASS_NAME" value="com.emailclient.service.AuthServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,15 +120,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AuthServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="aidin-email-client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.emailclient.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.emailclient.service" />
+      <option name="MAIN_CLASS_NAME" value="com.emailclient.service.AuthServiceTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="--add-modules javafx.controls,javafx.fxml,javafx.web" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.MainApp" />
       <item itemvalue="JUnit.AuthServiceTest" />
-      <item itemvalue="JUnit.AuthServiceTest (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AuthServiceTest (1)" />
         <item itemvalue="Application.MainApp" />
+        <item itemvalue="JUnit.AuthServiceTest" />
         <item itemvalue="JUnit.AuthServiceTest" />
       </list>
     </recent_temporary>
@@ -148,7 +166,23 @@
       <option name="project" value="LOCAL" />
       <updated>1769532486012</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Sprint 1: Core MVC structure, JavaFX login UI, and modular configuration">
+      <option name="closed" value="true" />
+      <created>1769534450963</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1769534450964</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Sprint 1: Core MVC structure, JavaFX login UI, and modular configuration">
+      <option name="closed" value="true" />
+      <created>1769534503561</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1769534503561</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

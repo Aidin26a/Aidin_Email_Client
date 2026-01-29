@@ -1,17 +1,29 @@
 package com.emailclient.model;
 
-import com.emailclient.model.EmailMessage;
-import java.time.LocalDateTime;
-import java.util.List;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 public class EmailMessage {
-    private String messageId; // Unique ID for tracking [cite: 49]
-    private String sender;    // Email address of the sender [cite: 49]
-    private List<String> recipients; // List of recipients [cite: 49]
-    private String subject;   // Email subject line [cite: 41]
-    private String body;      // Content of the email [cite: 41]
-    private LocalDateTime timestamp; // When it was sent/received [cite: 49]
-    private boolean isRead;   // Status tracker (Functional Req F6) [cite: 41, 49]
+    private final StringProperty sender;
+    private final StringProperty subject;
+    private final StringProperty date;
+    private final StringProperty content;
 
-    // Constructor, Getters and Setters go here
+    public EmailMessage(String sender, String subject, String date, String content) {
+        this.sender = new SimpleStringProperty(sender);
+        this.subject = new SimpleStringProperty(subject);
+        this.date = new SimpleStringProperty(date);
+        this.content = new SimpleStringProperty(content);
+    }
+
+    // Getters for the Properties (JavaFX TableView needs these)
+    public StringProperty senderProperty() { return sender; }
+    public StringProperty subjectProperty() { return subject; }
+    public StringProperty dateProperty() { return date; }
+    public StringProperty contentProperty() { return content; }
+
+    // Standard Getters
+    public String getSender() { return sender.get(); }
+    public String getSubject() { return subject.get(); }
+    public String getContent() { return content.get(); }
 }

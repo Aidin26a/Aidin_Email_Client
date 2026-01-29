@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.emailclient.controller.DashboardController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <Menu text="File">
+                <MenuItem text="Logout" onAction="#handleLogout" />
+                <MenuItem text="Close" onAction="#handleClose" />
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <left>
+        <VBox prefWidth="150.0" spacing="10" style="-fx-padding: 10;">
+            <Label style="-fx-font-weight: bold;" text="Mailboxes" />
+            <Button maxWidth="Infinity" text="Inbox" />
+            <Button maxWidth="Infinity" onAction="#onComposeClick" text="Compose" style="-fx-background-color: #2196F3; -fx-text-fill: white;" />
+            <Button onAction="#onDeleteClick" maxWidth="Infinity" text="Delete Email"
+                    style="-fx-background-color: #f44336; -fx-text-fill: white;" />
+        </VBox>
+    </left>
+
+    <center>
+        <SplitPane dividerPositions="0.4" orientation="VERTICAL">
+            <TableView fx:id="emailTableView">
+                <columns>
+                    <TableColumn fx:id="senderColumn" prefWidth="200.0" text="Sender"/>
+                    <TableColumn fx:id="subjectColumn" prefWidth="400.0" text="Subject"/>
+                    <TableColumn fx:id="dateColumn" prefWidth="150.0" text="Date"/>
+                </columns>
+            </TableView>
+
+            <VBox VBox.vgrow="ALWAYS">
+                <WebView fx:id="emailWebView" VBox.vgrow="ALWAYS" />
+            </VBox>
+        </SplitPane>
+    </center>
+</BorderPane>

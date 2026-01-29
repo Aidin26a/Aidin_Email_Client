@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" prefWidth="500.0" prefHeight="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.emailclient.controller.ComposeController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Recipient:"/>
+    <TextField fx:id="recipientField" promptText="example@gmail.com"/>
+
+    <Label text="Subject:"/>
+    <TextField fx:id="subjectField" promptText="Enter subject"/>
+
+    <Label text="Message:"/>
+    <TextArea fx:id="messageArea" VBox.vgrow="ALWAYS" promptText="Write your email here..."/>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Cancel" onAction="#onCancelClick"/>
+        <Button text="Send" onAction="#onSendClick" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button text="Attach File" onAction="#onAttachClick" />
+        <Label fx:id="attachmentLabel" text="No file attached" textFill="#777777" />
+    </HBox>
+</VBox>
