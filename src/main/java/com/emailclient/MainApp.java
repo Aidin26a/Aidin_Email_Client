@@ -1,7 +1,7 @@
 package com.emailclient;
 
 import com.emailclient.controller.DashboardController;
-import com.emailclient.database.DatabaseManager; // Step 1: Add this import
+import com.emailclient.database.DatabaseManager;
 import com.emailclient.service.DatabaseService;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

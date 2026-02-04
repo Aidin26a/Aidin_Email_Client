@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0a3d172-3989-4e41-b8e9-513e859a1851" name="Changes" comment="Sprint 1: Core MVC structure, JavaFX login UI, and modular configuration">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/email_client.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emailclient.db" beforeDir="false" afterPath="$PROJECT_DIR$/emailclient.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailclient/controller/ComposeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/controller/ComposeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailclient/controller/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/controller/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailclient/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/service/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/emailclient/compose.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/emailclient/compose.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/emailclient/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/emailclient/dashboard.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="b0a3d172-3989-4e41-b8e9-513e859a1851" name="Changes" comment="Sprint 1: Core MVC structure, JavaFX login UI, and modular configuration" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
