@@ -3,8 +3,8 @@ module com.emailclient {
     requires javafx.fxml;
     requires java.sql;
     requires org.xerial.sqlitejdbc;
-    requires jbcrypt; // Fixes the BCrypt red lines
-    requires jakarta.mail; // Required for Sprint 3
+    requires jbcrypt;
+    requires jakarta.mail;
     requires javafx.web;
     requires jakarta.activation;
 
