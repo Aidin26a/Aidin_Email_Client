@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0a3d172-3989-4e41-b8e9-513e859a1851" name="Changes" comment="Sprint 1: Core MVC structure, JavaFX login UI, and modular configuration">
-      <change beforePath="$PROJECT_DIR$/emailclient.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

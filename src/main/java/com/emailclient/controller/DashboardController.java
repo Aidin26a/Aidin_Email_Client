@@ -33,7 +33,6 @@ public class DashboardController {
         senderColumn.setCellValueFactory(cellData -> cellData.getValue().senderProperty());
         subjectColumn.setCellValueFactory(cellData -> cellData.getValue().subjectProperty());
 
-        // Requirement F1: Selection Listener to Read Emails
         emailTableView.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal != null) {
                 // Renders the HTML content properly in the WebView
@@ -59,7 +58,6 @@ public class DashboardController {
                 e.printStackTrace();
                 Platform.runLater(() -> {
                     loadingSpinner.setVisible(false);
-                    // Requirement F2: Provide feedback on errors
                     new Alert(Alert.AlertType.ERROR, "Failed to load emails: " + e.getMessage()).show();
                 });
             }
@@ -87,7 +85,6 @@ public class DashboardController {
     @FXML
     private void handleLogout() {
         try {
-            // Load the Login screen (Requirement F2)
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/emailclient/login.fxml"));
             Parent root = loader.load();
 
@@ -111,7 +108,6 @@ public class DashboardController {
         EmailMessage selected = emailTableView.getSelectionModel().getSelectedItem();
         if (selected != null) {
             emailTableView.getItems().remove(selected);
-            // Requirement F1: Clear the view after deletion
             emailWebView.getEngine().loadContent("");
         }
     }
