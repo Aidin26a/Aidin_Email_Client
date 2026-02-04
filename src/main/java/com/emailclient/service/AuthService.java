@@ -10,4 +10,5 @@ public class AuthService {
 
     public void register(User newUser) {
         // Logic to save hashed password to SQLite
+    }
 }
