@@ -19,7 +19,6 @@ public class LoginController {
         String password = passwordField.getText();
 
         if (!email.isEmpty() && !password.isEmpty()) {
-            // Save to database for next time (Requirement F4)
             User.DatabaseService db = new User.DatabaseService();
             db.saveUser(email, password);
 

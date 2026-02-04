@@ -2,10 +2,6 @@ package com.emailclient.model;
 
 import java.sql.*;
 
-/**
- * Represents a user in the system.
- * Maps to the Class Diagram requirements.
- */
 public class User {
     private int userId;
     private String username;

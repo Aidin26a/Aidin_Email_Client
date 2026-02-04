@@ -8,10 +8,10 @@ public class InboxController {
     private TableView<EmailMessage> emailTable;
 
     public void handleViewInbox() {
-        // Logic to refresh inbox via IMAP [cite: 72]
+        // Logic to refresh inbox via IMAP
     }
 
     public void handleSendEmail() {
-        // Logic to open Compose window [cite: 66]
+        // Logic to open Compose window
     }
 }

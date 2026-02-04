@@ -14,6 +14,6 @@ public class EmailClient {
         return instance;
     }
 
-    // Handles core operations [cite: 41]
+    // Handles core operations
     public void login(String email, String password) { /* Auth logic */ }
 }

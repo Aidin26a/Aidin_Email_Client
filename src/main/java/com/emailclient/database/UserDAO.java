@@ -8,9 +8,6 @@ import java.sql.SQLException;
 
 public class UserDAO {
 
-    /**
-     * Requirement F4 & N1: Hashes the password and saves the user to SQLite.
-     */
     public void registerUser(String email, String password) {
         String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
         String sql = "INSERT INTO users(email, password) VALUES(?, ?)";
@@ -28,9 +25,6 @@ public class UserDAO {
         }
     }
 
-    /**
-     * Requirement N1: Verifies the typed password against the hashed password in the DB.
-     */
     public boolean authenticateUser(String email, String password) {
         String sql = "SELECT password FROM users WHERE email = ?";
 
@@ -48,6 +42,6 @@ public class UserDAO {
         } catch (SQLException e) {
             System.out.println("Login Database Error: " + e.getMessage());
         }
-        return false; // Returns false if user not found or password doesn't match
+        return false;
     }
 }

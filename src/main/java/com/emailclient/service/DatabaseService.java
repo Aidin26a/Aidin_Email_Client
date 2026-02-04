@@ -3,7 +3,6 @@ package com.emailclient.service;
 import java.sql.*;
 
 public class DatabaseService {
-    // This creates a file named 'emailclient.db' in your project folder
     private static final String URL = "jdbc:sqlite:emailclient.db";
 
     public DatabaseService() {
@@ -27,7 +26,6 @@ public class DatabaseService {
         }
     }
 
-    // Requirement F4: Save credentials to skip login next time
     public void saveUser(String email, String password) {
         String sql = "INSERT OR REPLACE INTO users(email, password) VALUES(?, ?)";
 

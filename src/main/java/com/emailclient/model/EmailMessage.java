@@ -16,7 +16,7 @@ public class EmailMessage {
         this.content = new SimpleStringProperty(content);
     }
 
-    // Getters for the Properties (JavaFX TableView needs these)
+    // Getters for the Properties
     public StringProperty senderProperty() { return sender; }
     public StringProperty subjectProperty() { return subject; }
     public StringProperty dateProperty() { return date; }

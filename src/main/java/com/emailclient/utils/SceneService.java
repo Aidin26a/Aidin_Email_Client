@@ -7,9 +7,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class SceneService {
-    /**
-     * Requirement N6: Centralized scene switching logic.
-     */
     public static void changeScene(Stage currentStage, String fxmlFile, String title) {
         try {
             // Updated path logic to be more reliable

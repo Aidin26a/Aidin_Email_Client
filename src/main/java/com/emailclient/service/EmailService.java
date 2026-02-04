@@ -10,7 +10,6 @@ import java.util.Properties;
 
 public class EmailService {
 
-    // F1: Fetching & Reading Emails
     public ObservableList<EmailMessage> fetchEmails(String email, String password) throws Exception {
         ObservableList<EmailMessage> emails = FXCollections.observableArrayList();
         Properties props = new Properties();
@@ -44,7 +43,6 @@ public class EmailService {
         return emails;
     }
 
-    // F3: Sending Emails with optional Attachment
     public void sendEmail(String senderEmail, String password, String recipient, String subject, String body, File attachment) throws Exception {
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
