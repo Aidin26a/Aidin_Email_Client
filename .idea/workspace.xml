@@ -5,24 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0a3d172-3989-4e41-b8e9-513e859a1851" name="Changes" comment="Sprint 1: Core MVC structure, JavaFX login UI, and modular configuration">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/controller/ComposeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/controller/DashboardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/database/DatabaseManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/database/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/service/DatabaseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/service/EmailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/utils/SceneService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/emailclient/compose.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/emailclient/dashboard.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/emailclient/login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailclient/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailclient/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailclient/model/EmailMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/model/EmailMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailclient/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email_client.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emailclient.db" beforeDir="false" afterPath="$PROJECT_DIR$/emailclient.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailclient/controller/ComposeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/controller/ComposeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailclient/controller/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/controller/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailclient/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailclient/service/EmailService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/emailclient/view/login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/emailclient/compose.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/emailclient/compose.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/emailclient/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/emailclient/dashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,27 +44,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.MainApp.executor": "Run",
-    "JUnit.AuthServiceTest (1).executor": "Run",
-    "JUnit.AuthServiceTest.executor": "Run",
-    "Maven.aidin-email-client [clean].executor": "Run",
-    "Maven.aidin-email-client [compile].executor": "Run",
-    "Maven.aidin-email-client [install].executor": "Run",
-    "Maven.aidin-email-client [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor": "Run",
-    "Maven.aidin-email-client [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Alims/Documents/Aidin_Email_Client",
-    "onboarding.tips.debug.path": "C:/Users/Alims/OneDrive/Рабочий стол/Aidin_Email_Client/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainApp.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthServiceTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.aidin-email-client [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.aidin-email-client [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.aidin-email-client [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.aidin-email-client [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.aidin-email-client [org.openjfx:javafx-maven-plugin:0.0.8:run].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Alims/Documents/Aidin_Email_Client&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Alims/OneDrive/Рабочий стол/Aidin_Email_Client/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Alims\Documents\Aidin_Email_Client\src\main\resources\com\emailclient" />

@@ -96,12 +96,16 @@ public class EmailService {
     }
 
     private String getTextFromMimeMultipart(MimeMultipart mimeMultipart) throws Exception {
-        StringBuilder result = new StringBuilder();
+        String result = "";
         for (int i = 0; i < mimeMultipart.getCount(); i++) {
             BodyPart bodyPart = mimeMultipart.getBodyPart(i);
-            if (bodyPart.isMimeType("text/plain")) result.append(bodyPart.getContent());
-            else if (bodyPart.isMimeType("text/html")) result.append(bodyPart.getContent());
+            if (bodyPart.isMimeType("text/plain")) {
+                result = bodyPart.getContent().toString();
+            } else if (bodyPart.isMimeType("text/html")) {
+                // HTML is better for WebView, so we return it immediately if found
+                return bodyPart.getContent().toString();
+            }
         }
-        return result.toString();
+        return result;
     }
 }

@@ -15,7 +15,8 @@ public class DashboardController {
     @FXML private TableView<EmailMessage> emailTableView;
     @FXML private TableColumn<EmailMessage, String> senderColumn;
     @FXML private TableColumn<EmailMessage, String> subjectColumn;
-    @FXML private WebView emailWebView; // Requirement F1: Upgrade to WebView for HTML rendering
+    @FXML private WebView emailWebView;
+    @FXML private ProgressIndicator loadingSpinner;
 
     private EmailService emailService = new EmailService();
     private String userEmail, userPass;
@@ -42,13 +43,25 @@ public class DashboardController {
     }
 
     private void loadEmails() {
-        // Requirement N5: Run network tasks in a background thread
+        // Show the spinner before starting the background task
+        loadingSpinner.setVisible(true);
+
         new Thread(() -> {
             try {
                 var emails = emailService.fetchEmails(userEmail, userPass);
-                Platform.runLater(() -> emailTableView.setItems(emails));
+
+                Platform.runLater(() -> {
+                    emailTableView.setItems(emails);
+                    // Hide the spinner once the emails are in the table
+                    loadingSpinner.setVisible(false);
+                });
             } catch (Exception e) {
                 e.printStackTrace();
+                Platform.runLater(() -> {
+                    loadingSpinner.setVisible(false);
+                    // Requirement F2: Provide feedback on errors
+                    new Alert(Alert.AlertType.ERROR, "Failed to load emails: " + e.getMessage()).show();
+                });
             }
         }).start();
     }

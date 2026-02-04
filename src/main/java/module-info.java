@@ -6,6 +6,7 @@ module com.emailclient {
     requires jbcrypt; // Fixes the BCrypt red lines
     requires jakarta.mail; // Required for Sprint 3
     requires javafx.web;
+    requires jakarta.activation;
 
     // This allows JavaFX to see your controllers (Fixes FXML errors)
     opens com.emailclient.controller to javafx.fxml;

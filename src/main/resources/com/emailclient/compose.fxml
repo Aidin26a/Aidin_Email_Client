@@ -16,7 +16,7 @@
     <TextField fx:id="subjectField" promptText="Enter subject"/>
 
     <Label text="Message:"/>
-    <TextArea fx:id="messageArea" VBox.vgrow="ALWAYS" promptText="Write your email here..."/>
+    <TextArea fx:id="bodyArea" promptText="Enter message..." />
 
     <HBox spacing="10" alignment="CENTER_RIGHT">
         <Button text="Cancel" onAction="#onCancelClick"/>

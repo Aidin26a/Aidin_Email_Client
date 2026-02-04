@@ -26,13 +26,16 @@
 
     <center>
         <SplitPane dividerPositions="0.4" orientation="VERTICAL">
-            <TableView fx:id="emailTableView">
-                <columns>
-                    <TableColumn fx:id="senderColumn" prefWidth="200.0" text="Sender"/>
-                    <TableColumn fx:id="subjectColumn" prefWidth="400.0" text="Subject"/>
-                    <TableColumn fx:id="dateColumn" prefWidth="150.0" text="Date"/>
-                </columns>
-            </TableView>
+            <StackPane>
+                <TableView fx:id="emailTableView">
+                    <columns>
+                        <TableColumn fx:id="senderColumn" prefWidth="200.0" text="Sender"/>
+                        <TableColumn fx:id="subjectColumn" prefWidth="400.0" text="Subject"/>
+                        <TableColumn fx:id="dateColumn" prefWidth="150.0" text="Date"/>
+                    </columns>
+                </TableView>
+                <ProgressIndicator fx:id="loadingSpinner" visible="false" maxHeight="50" maxWidth="50" />
+            </StackPane>
 
             <VBox VBox.vgrow="ALWAYS">
                 <WebView fx:id="emailWebView" VBox.vgrow="ALWAYS" />
